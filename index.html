@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Eigenvalue & Eigenvector Analyzer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <h2><i class="fas fa-atom"></i> Eigen Analyzer</h2>
+
+        <h3>Team Members</h3>
+        <ul>
+            <li>Aarya Suryavanshi (125B1F235)</li>
+            <li>Shreya Irale (125B1F214)</li>
+            <li>Anjali Borse (125B1F236)</li>
+            <li>Samruddhi Magar (125B1F242)</li>
+        </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+
+        <h1>Eigenvalue & Eigenvector Analyzer</h1>
+
+        <!-- Matrix Size -->
+        <label>Matrix Size:</label>
+        <select id="matrixSize">
+            <option value="2">2 × 2</option>
+            <option value="3" selected>3 × 3</option>
+            <option value="4">4 × 4</option>
+        </select>
+
+        <!-- Matrix -->
+        <div id="matrixContainer" class="matrix-grid"></div>
+
+        <!-- Eigenvalues -->
+        <h3>Eigenvalues</h3>
+        <input type="text" id="eigenvalues"
+               placeholder="Example: 2, 3, -1">
+
+        <!-- Eigenvectors -->
+        <h3>Eigenvectors</h3>
+        <textarea id="eigenvectors" rows="5"
+                  placeholder="One eigenvector per line
+Example:
+1,0,0
+0,1,0
+0,0,1"></textarea>
+
+        <!-- Buttons -->
+        <div class="controls">
+            <button onclick="analyze()">Analyze</button>
+            <button onclick="resetAll()">Reset</button>
+        </div>
+
+        <!-- Results -->
+        <div id="results"></div>
+
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
